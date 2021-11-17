@@ -1,5 +1,13 @@
 import React from 'react';
 import './App.css';
+import Product from './Product';
+import Tile from "./Tile";
+import bag_1 from './assets/bag_1.png'
+import bag_2 from './assets/bag_2.png'
+import bag_3 from './assets/bag_3.png'
+import bag_4 from './assets/bag_4.png'
+import brand from './assets/brand.png'
+import our_story from './assets/our_story.png'
 
 // STAPPENPLAN OPDRACHT 1
 // 1. nav-element maken
@@ -39,8 +47,47 @@ function App() {
         </button>
         </nav>
         <main>
-
+          <Product
+            label="Best seller"
+            image={bag_1}
+            name="The handy bag"
+            price="€400,-"
+          />
+          <Product
+              label="Best seller"
+              image={bag_2}
+              name="The stylish bag"
+              price="€250,-"
+          />
+          <Product
+              label="New collection"
+              image={bag_3}
+              name="The simple bag"
+              price="€300,-"
+          />
+          <Product
+              label="New collection"
+              image={bag_4}
+              name="The trendy bag"
+              price="€150,-"
+          />
         </main>
+        <footer>
+          <Tile
+              title = "THE BRAND"
+              text = "This is our brand"
+          />
+          <Tile
+              image={brand}
+          />
+          <Tile
+              image={our_story}
+          />
+          <Tile
+              title = "OUR STORY"
+              text = "This is our story"
+          />
+        </footer>
       </>
   );
 }
