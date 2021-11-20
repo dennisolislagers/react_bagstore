@@ -1,7 +1,9 @@
 import React from 'react';
+
 import './App.css';
-import Product from './Product';
-import Tile from "./Tile";
+import Product from './components/product/Product';
+import Tile from './components/tile/Tile';
+import Button from './components/button/Button.js'
 import bag_1 from './assets/bag_1.png'
 import bag_2 from './assets/bag_2.png'
 import bag_3 from './assets/bag_3.png'
@@ -32,19 +34,38 @@ import our_story from './assets/our_story.png'
 // 9. Vervang de statische tekst door dynamische waardes uit het props object
 
 
+
+
 function App() {
   return (
       <>
       <h1>Handbags & Purses</h1>
         <nav>
-        <button type="button"
-                onClick={() => console.log("Hier is de collectie")}> To The Collection
-        </button>
-        <button type="button"
-                onClick={() => console.log("Hier zijn alle tassen")}> Shop All Bags
-        </button>
-        <button disabled={true}>Pre Orders
-        </button>
+
+        {/*<button type="button"*/}
+        {/*             onClick={() => console.log("Hier is de collectie")}> Shop All Bags*/}
+        {/*</button>*/}
+        {/*<button type="button"*/}
+        {/*        onClick={() => console.log("Hier zijn alle tassen")}> Shop All Bags*/}
+        {/*</button>*/}
+        {/*<button disabled={true}>Pre Orders*/}
+        {/*</button>*/}
+        <Button
+          message="Hier vind je de collectie"
+          title="to the collection"
+          enabled={true}
+        />
+        <Button
+          message="Hier zijn alle tassen"
+          title="shop all bags"
+          enabled={true}
+        />
+        <Button
+          message="Deze knop werkt nu niet"
+          title="pre orders"
+          enabled={false}
+        />
+
         </nav>
         <main>
           <Product
@@ -75,7 +96,7 @@ function App() {
         <footer>
           <Tile
               title = "THE BRAND"
-              text = "This is our brand"
+              text ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam autem beatae corporis deserunt ducimus eaque expedita explicabo fugit, hic nesciunt nobis numquam quam quibusdam repellat repudiandae voluptatem? Ipsa, perspiciatis!"
           />
           <Tile
               image={brand}
@@ -85,7 +106,7 @@ function App() {
           />
           <Tile
               title = "OUR STORY"
-              text = "This is our story"
+              text ="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem consequuntur dolorem dolorum hic impedit ipsam iste laboriosam laborum maiores non, nulla, odio officiis optio quasi reprehenderit ullam ut veritatis?"
           />
         </footer>
       </>
